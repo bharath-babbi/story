@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>For My Cutie Pie ❤️</title>
+
+    <meta name="theme-color"
+          content="#09142d">
+
+    <meta name="description"
+          content="A magical journey made with love.">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Lottie -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- LOADER -->
+<!-- ================================================= -->
+
+<div id="loader">
+
+    <div class="loader-stars"></div>
+
+    <div class="loader-content">
+
+        <h1>
+            For My Cutie Pie ❤️
+        </h1>
+
+        <p>
+            Loading our little magical world...
+        </p>
+
+        <div class="loading-bar">
+
+            <div class="loading-progress"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================================================= -->
+<!-- MUSIC BUTTON -->
+<!-- ================================================= -->
+
+<button id="musicButton">
+
+    🎵 Tap To Begin
+
+</button>
+
+<audio
+    id="piano"
+    loop>
+
+    <source
+        src="assets/piano.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+<audio
+    id="meow">
+
+    <source
+        src="assets/meow.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+<!-- ================================================= -->
+<!-- CURSOR -->
+<!-- ================================================= -->
+
+<div id="cursorGlow"></div>
+
+<div id="cursorTrail"></div>
+
+<!-- ================================================= -->
+<!-- EXPERIENCE -->
+<!-- ================================================= -->
+
+<main id="experience">
+
+<!-- ================================================= -->
+<!-- SCENE 1 : NIGHT SKY -->
+<!-- ================================================= -->
+
+<section
+    id="scene1"
+    class="scene">
+
+    <!-- Background -->
+
+    <div id="nightSky">
+
+        <div id="moonGlow"></div>
+
+        <div id="moon"></div>
+
+        <div id="stars"></div>
+
+        <div id="shootingStars"></div>
+
+        <div id="cloudLayerOne"></div>
+
+        <div id="cloudLayerTwo"></div>
+
+        <div id="mist"></div>
+
+        <div id="groundGlow"></div>
+
+        <div id="ground"></div>
+
+    </div>
+
+    <!-- Intro -->
+
+    <div class="introText">
+
+        <h2>
+            Hi Cutie Pie ❤️
+        </h2>
+
+        <h1>
+            This little world...
+        </h1>
+
+        <p>
+            wasn't made by magic.
+        </p>
+
+        <p>
+            It was made with lots of coffee,
+            late nights,
+            and countless thoughts about you.
+        </p>
+
+        <p>
+            Scroll slowly...
+        </p>
+
+        <p>
+            Every scene has a little surprise waiting.
+        </p>
+
+    </div>
+
+    <!-- Scroll Hint -->
+
+    <div class="scrollIndicator">
+
+        <span>Scroll</span>
+
+        <div class="mouse">
+
+            <div class="wheel"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCENE 2 : THE LITTLE CAT -->
+<!-- ================================================= -->
+
+<section
+    id="scene2"
+    class="scene">
+
+    <!-- Background -->
+
+    <div class="grassLayer"></div>
+
+    <div class="hill hill1"></div>
+    <div class="hill hill2"></div>
+
+    <!-- Flowers -->
+
+    <div id="flowers">
+
+        <span class="flower">🌸</span>
+        <span class="flower">🌼</span>
+        <span class="flower">🌷</span>
+        <span class="flower">🌼</span>
+        <span class="flower">🌸</span>
+        <span class="flower">🌷</span>
+
+    </div>
+
+    <!-- Paw Prints -->
+
+    <div id="pawPrintContainer"></div>
+
+    <!-- Cat -->
+
+    <div id="catContainer">
+
+        <div id="cat"></div>
+
+    </div>
+
+    <!-- Speech Bubble -->
+
+    <div id="speechBubble">
+
+        <h3>Meow! 🐈</h3>
+
+        <p>
+            I have something very special
+            to show you...
+        </p>
+
+    </div>
+
+    <!-- Floating Hearts -->
+
+    <div class="tinyHeart heart1">❤️</div>
+    <div class="tinyHeart heart2">💖</div>
+    <div class="tinyHeart heart3">💕</div>
+
+    <!-- Bottom Text -->
+
+    <div class="sceneTitle">
+
+        <h2>
+            A little friend appeared...
+        </h2>
+
+        <p>
+            He travelled all this way
+            carrying a tiny surprise.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCENE 3 : THE ENVELOPE -->
+<!-- ================================================= -->
+
+<section
+    id="scene3"
+    class="scene">
+
+    <!-- Magical Background -->
+
+    <div id="sparkleField"></div>
+
+    <div id="floatingLights"></div>
+
+    <!-- Envelope Area -->
+
+    <div id="envelopeContainer">
+
+        <div class="envelopeShadow"></div>
+
+        <div id="envelope">
+
+            <div class="envelopeBack"></div>
+
+            <div class="envelopeLetter">
+
+                <h2>Dear Cutie Pie ❤️</h2>
+
+                <p>
+                    Before you continue...
+                </p>
+
+                <p>
+                    I just wanted to remind you
+                    how special you are to me.
+                </p>
+
+            </div>
+
+            <div class="envelopeFront"></div>
+
+            <div class="envelopeFlap"></div>
+
+            <div class="seal">
+                ❤️
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Falling Sparkles -->
+
+    <div id="magicParticles"></div>
+
+    <!-- Scene Text -->
+
+    <div class="sceneTitle">
+
+        <h2>
+            A Letter For You 💌
+        </h2>
+
+        <p>
+            Some feelings are easier to write
+            than to say...
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCENE 4 : OUR LITTLE STORY -->
+<!-- ================================================= -->
+
+<section
+    id="scene4"
+    class="scene">
+
+    <!-- Falling Petals -->
+
+    <div id="petals"></div>
+
+    <!-- Soft Glow -->
+
+    <div id="storyGlow"></div>
+
+    <!-- Story Card -->
+
+    <div id="story">
+
+        <h1>
+            A Few Words...
+        </h1>
+
+        <div id="typewriter">
+
+            <p>
+                Sometimes life becomes busy...
+            </p>
+
+            <p>
+                Sometimes we don't always find
+                the perfect words at the perfect time.
+            </p>
+
+            <p>
+                But I hope this little page reminds you
+                that someone spent hours creating
+                a tiny magical world...
+            </p>
+
+            <p>
+                Just to make you smile.
+            </p>
+
+            <p>
+                Every animation,
+                every little star,
+                every flower,
+                every cloud,
+                every heartbeat...
+            </p>
+
+            <p>
+                was placed here
+                thinking about you.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Decorative Stars -->
+
+    <div class="storyStars">
+
+        <span>✨</span>
+        <span>⭐</span>
+        <span>✨</span>
+        <span>⭐</span>
+        <span>✨</span>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCENE 5 : UNDER THE MOON -->
+<!-- ================================================= -->
+
+<section
+    id="scene5"
+    class="scene">
+
+    <!-- Background Effects -->
+
+    <div id="fireflies"></div>
+
+    <div id="lanterns"></div>
+
+    <div id="hearts"></div>
+
+    <div id="constellation"></div>
+
+    <!-- Final Letter -->
+
+    <div id="finalLetter">
+
+        <h1>
+            To My Cutie Pie ❤️
+        </h1>
+
+        <p>
+
+            If you've made it this far...
+
+            thank you for taking this little journey with me.
+
+        </p>
+
+        <p>
+
+            I know this is just a webpage.
+
+            But every little animation,
+
+            every star,
+
+            every cloud,
+
+            every line of code,
+
+            was written while thinking about you.
+
+        </p>
+
+        <p>
+
+            I wanted to create something that would make you pause,
+
+            smile,
+
+            and hopefully feel just how much you mean to me.
+
+        </p>
+
+        <p>
+
+            No matter how many sunsets we watch,
+
+            how many conversations we have,
+
+            or how much time passes,
+
+            I hope we always keep finding little reasons to smile together.
+
+        </p>
+
+        <p>
+
+            Thank you for being you.
+
+        </p>
+
+        <h2>
+
+            ❤️ With Love ❤️
+
+        </h2>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCENE 6 : THE END -->
+<!-- ================================================= -->
+
+<section
+    id="scene6"
+    class="scene">
+
+    <div class="goodbye">
+
+        <h1>
+
+            The End...
+
+        </h1>
+
+        <p>
+
+            Or maybe...
+
+            just the beginning. ✨
+
+        </p>
+
+    </div>
+
+    <div class="shootingEnd"></div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECRET MESSAGE -->
+<!-- ================================================= -->
+
+<div
+    id="secretMessage"
+    class="secretMessage">
+
+    <h2>
+
+        🥹 You Found The Secret
+
+    </h2>
+
+    <p>
+
+        If you're reading this...
+
+        you're officially the cutest person in my universe.
+
+    </p>
+
+</div>
+
+</main>
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

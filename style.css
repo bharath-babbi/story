@@ -1,0 +1,1909 @@
+/* ==========================================================
+   FOR MY CUTIE PIE ❤️
+   style.css
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    overflow-x:hidden;
+
+    background:#020814;
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* ==========================================================
+   EXPERIENCE
+========================================================== */
+
+#experience{
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+.scene{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+   LOADER
+========================================================== */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#020814;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.loader-content{
+
+    width:420px;
+
+    text-align:center;
+
+}
+
+.loader-content h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    font-family:'Dancing Script',cursive;
+
+}
+
+.loader-content p{
+
+    color:#d6d6d6;
+
+    margin-bottom:30px;
+
+}
+
+.loading-bar{
+
+    width:100%;
+
+    height:8px;
+
+    background:#1f355c;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.loading-progress{
+
+    width:0;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #ff7eb6,
+        #ffffff
+    );
+
+}
+
+/* ==========================================================
+   MUSIC BUTTON
+========================================================== */
+
+#musicButton{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    padding:18px 28px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#ff7eb6;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    z-index:999;
+
+    box-shadow:
+        0 10px 30px
+        rgba(255,126,182,.4);
+
+}
+
+/* ==========================================================
+   CURSOR
+========================================================== */
+
+#cursorGlow{
+
+    position:fixed;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:white;
+
+    pointer-events:none;
+
+    filter:blur(5px);
+
+    z-index:99999;
+
+}
+
+#cursorTrail{
+
+    position:fixed;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#ff7eb6;
+
+    pointer-events:none;
+
+    z-index:99998;
+
+}
+
+
+/* ==========================================================
+   SCENE 1
+========================================================== */
+
+#scene1{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #020814 0%,
+        #081b3c 55%,
+        #162d52 100%
+    );
+
+}
+
+/* Night Sky */
+
+#nightSky{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+/* Moon */
+
+#moon{
+
+    position:absolute;
+
+    top:70px;
+
+    right:90px;
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    background:#fffdf3;
+
+    box-shadow:
+        0 0 60px rgba(255,255,255,.8),
+        0 0 120px rgba(255,255,255,.45);
+
+}
+
+#moonGlow{
+
+    position:absolute;
+
+    top:35px;
+
+    right:55px;
+
+    width:240px;
+
+    height:240px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            rgba(255,255,255,.30),
+            transparent 70%
+        );
+
+}
+
+/* Stars */
+
+#stars{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.star{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+        0 0 10px white;
+
+}
+
+/* Shooting Stars */
+
+#shootingStars{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.shooting-star{
+
+    position:absolute;
+
+    width:180px;
+
+    height:2px;
+
+    background:
+        linear-gradient(
+            to right,
+            white,
+            transparent
+        );
+
+    transform:rotate(-25deg);
+
+    box-shadow:
+        0 0 15px white;
+
+}
+
+/* Clouds */
+
+#cloudLayerOne,
+#cloudLayerTwo{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.cloud{
+
+    position:absolute;
+
+    width:230px;
+
+    height:75px;
+
+    border-radius:80px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    filter:blur(2px);
+
+}
+
+.cloud::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:110px;
+
+    height:110px;
+
+    left:20px;
+
+    top:-40px;
+
+    border-radius:50%;
+
+    background:inherit;
+
+}
+
+.cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    right:25px;
+
+    top:-55px;
+
+    border-radius:50%;
+
+    background:inherit;
+
+}
+
+/* Mist */
+
+#mist{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:220px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(255,255,255,.08)
+        );
+
+}
+
+/* Ground */
+
+#groundGlow{
+
+    position:absolute;
+
+    bottom:-120px;
+
+    width:100%;
+
+    height:220px;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255,255,255,.08),
+            transparent
+        );
+
+}
+
+#ground{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:110px;
+
+    background:#06111f;
+
+}
+
+/* Intro */
+
+.introText{
+
+    position:relative;
+
+    z-index:5;
+
+    text-align:center;
+
+    max-width:760px;
+
+    padding:20px;
+
+}
+
+.introText h2{
+
+    font-size:3rem;
+
+    font-family:'Dancing Script',cursive;
+
+    margin-bottom:15px;
+
+}
+
+.introText h1{
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+
+}
+
+.introText p{
+
+    font-size:1.2rem;
+
+    color:#eeeeee;
+
+    line-height:2;
+
+}
+
+/* Scroll */
+
+.scrollIndicator{
+
+    position:absolute;
+
+    bottom:40px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:white;
+
+}
+
+.mouse{
+
+    width:34px;
+
+    height:56px;
+
+    border:2px solid white;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.wheel{
+
+    width:5px;
+
+    height:10px;
+
+    margin-top:10px;
+
+    border-radius:50px;
+
+    background:white;
+
+    animation:scrollWheel 1.6s infinite;
+
+}
+
+@keyframes scrollWheel{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateY(18px);
+
+    }
+
+}
+
+/* ==========================================================
+   SCENE 2
+========================================================== */
+
+#scene2{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #102957,
+            #183c6e,
+            #244f7d
+        );
+
+}
+
+/* Hills */
+
+.hill{
+
+    position:absolute;
+
+    border-radius:50%;
+
+}
+
+.hill1{
+
+    width:120%;
+
+    height:260px;
+
+    bottom:-120px;
+
+    left:-10%;
+
+    background:#214b36;
+
+}
+
+.hill2{
+
+    width:90%;
+
+    height:220px;
+
+    bottom:-90px;
+
+    right:-15%;
+
+    background:#2c6044;
+
+}
+
+/* Grass */
+
+.grassLayer{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:160px;
+
+    background:
+        linear-gradient(
+            #3b7d47,
+            #255532
+        );
+
+}
+
+/* Flowers */
+
+#flowers{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:70px;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-evenly;
+
+    font-size:2rem;
+
+}
+
+.flower{
+
+    animation:flowerDance 3s ease-in-out infinite;
+
+    transform-origin:bottom center;
+
+}
+
+.flower:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+.flower:nth-child(3){
+
+    animation-delay:.8s;
+
+}
+
+.flower:nth-child(4){
+
+    animation-delay:1.2s;
+
+}
+
+.flower:nth-child(5){
+
+    animation-delay:1.6s;
+
+}
+
+.flower:nth-child(6){
+
+    animation-delay:2s;
+
+}
+
+@keyframes flowerDance{
+
+    0%,100%{
+
+        transform:rotate(-3deg);
+
+    }
+
+    50%{
+
+        transform:rotate(3deg);
+
+    }
+
+}
+
+/* Cat */
+
+#catContainer{
+
+    position:absolute;
+
+    bottom:95px;
+
+    left:-300px;
+
+    width:180px;
+
+    height:180px;
+
+    z-index:20;
+
+}
+
+#cat{
+
+    width:100%;
+
+    height:100%;
+
+}
+
+/* Paw Prints */
+
+#pawPrintContainer{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+.paw{
+
+    position:absolute;
+
+    width:22px;
+
+    height:22px;
+
+    background:
+        rgba(255,255,255,.4);
+
+    border-radius:50%;
+
+    filter:blur(.4px);
+
+}
+
+.paw::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:7px;
+
+    height:7px;
+
+    top:-5px;
+
+    left:2px;
+
+    border-radius:50%;
+
+    background:inherit;
+
+}
+
+.paw::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:7px;
+
+    height:7px;
+
+    top:-5px;
+
+    right:2px;
+
+    border-radius:50%;
+
+    background:inherit;
+
+}
+
+/* Speech Bubble */
+
+#speechBubble{
+
+    position:absolute;
+
+    right:12%;
+
+    top:18%;
+
+    width:280px;
+
+    padding:22px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    opacity:0;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.2);
+
+}
+
+#speechBubble h3{
+
+    margin-bottom:12px;
+
+    font-size:1.6rem;
+
+}
+
+#speechBubble p{
+
+    line-height:1.8;
+
+}
+
+/* Floating Hearts */
+
+.tinyHeart{
+
+    position:absolute;
+
+    font-size:2rem;
+
+    animation:heartFloat 5s ease-in-out infinite;
+
+}
+
+.heart1{
+
+    left:18%;
+
+    top:20%;
+
+}
+
+.heart2{
+
+    right:20%;
+
+    top:35%;
+
+    animation-delay:1.5s;
+
+}
+
+.heart3{
+
+    left:55%;
+
+    top:15%;
+
+    animation-delay:3s;
+
+}
+
+@keyframes heartFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+/* Scene Title */
+
+.sceneTitle{
+
+    position:absolute;
+
+    bottom:40px;
+
+    width:100%;
+
+    text-align:center;
+
+    z-index:30;
+
+}
+
+.sceneTitle h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:3rem;
+
+    margin-bottom:12px;
+
+}
+
+.sceneTitle p{
+
+    font-size:1.15rem;
+
+    color:#eeeeee;
+
+}
+
+/* ==========================================================
+   SCENE 3
+========================================================== */
+
+#scene3{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #13254d,
+            #22396c,
+            #314b86
+        );
+
+}
+
+/* ==========================================================
+   Sparkles
+========================================================== */
+
+#sparkleField,
+#floatingLights,
+#magicParticles{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   Envelope
+========================================================== */
+
+#envelopeContainer{
+
+    position:relative;
+
+    width:420px;
+
+    height:320px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    perspective:1200px;
+
+    z-index:20;
+
+}
+
+/* Shadow */
+
+.envelopeShadow{
+
+    position:absolute;
+
+    bottom:20px;
+
+    width:240px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.35);
+
+    filter:blur(18px);
+
+}
+
+/* Main Envelope */
+
+#envelope{
+
+    position:relative;
+
+    width:320px;
+
+    height:220px;
+
+    transform-style:preserve-3d;
+
+}
+
+/* Back */
+
+.envelopeBack{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#ffe7d1;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+}
+
+/* Front */
+
+.envelopeFront{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:55%;
+
+    background:#f7d6b6;
+
+    clip-path:polygon(0 0,50% 75%,100% 0,100% 100%,0 100%);
+
+}
+
+/* Flap */
+
+.envelopeFlap{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:55%;
+
+    background:#efd0b2;
+
+    transform-origin:top;
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+
+    z-index:30;
+
+}
+
+/* Letter */
+
+.envelopeLetter{
+
+    position:absolute;
+
+    left:18px;
+
+    top:18px;
+
+    width:284px;
+
+    height:180px;
+
+    background:white;
+
+    border-radius:8px;
+
+    padding:22px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.18);
+
+    z-index:5;
+
+}
+
+.envelopeLetter h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:2rem;
+
+    color:#ff5c8a;
+
+    margin-bottom:16px;
+
+}
+
+.envelopeLetter p{
+
+    color:#444;
+
+    line-height:1.8;
+
+}
+
+/* Wax Seal */
+
+.seal{
+
+    position:absolute;
+
+    left:50%;
+
+    top:46%;
+
+    transform:translate(-50%,-50%);
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    background:#ff4f72;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.2rem;
+
+    z-index:50;
+
+    box-shadow:
+        0 8px 18px rgba(255,80,120,.4);
+
+}
+
+/* Glow */
+
+#envelope::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-20px;
+
+    border-radius:18px;
+
+    background:
+        radial-gradient(
+            rgba(255,255,255,.25),
+            transparent 70%
+        );
+
+    filter:blur(15px);
+
+    z-index:-1;
+
+}
+
+/* Scene Title */
+
+#scene3 .sceneTitle{
+
+    position:absolute;
+
+    bottom:45px;
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+#scene3 .sceneTitle h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:3rem;
+
+    margin-bottom:15px;
+
+}
+
+#scene3 .sceneTitle p{
+
+    font-size:1.15rem;
+
+    color:#f2f2f2;
+
+}
+
+/* ==========================================================
+   SCENE 4 : STORY
+========================================================== */
+
+#scene4{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #081528,
+            #102957,
+            #193d72
+        );
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+   Falling Petals
+========================================================== */
+
+#petals{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+   Story Glow
+========================================================== */
+
+#storyGlow{
+
+    position:absolute;
+
+    width:900px;
+
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            rgba(255,255,255,.08),
+            transparent 70%
+        );
+
+    filter:blur(60px);
+
+}
+
+/* ==========================================================
+   Story Card
+========================================================== */
+
+#story{
+
+    position:relative;
+
+    width:80%;
+
+    max-width:850px;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.15);
+
+    box-shadow:
+
+        0 30px 80px
+        rgba(0,0,0,.35);
+
+    z-index:20;
+
+}
+
+/* ==========================================================
+   Story Heading
+========================================================== */
+
+#story h1{
+
+    text-align:center;
+
+    font-size:3.4rem;
+
+    font-family:
+        'Dancing Script',
+        cursive;
+
+    color:#ffffff;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================================
+   Typewriter
+========================================================== */
+
+#typewriter{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+#typewriter p{
+
+    font-size:1.18rem;
+
+    line-height:2.1;
+
+    color:#f2f2f2;
+
+    opacity:.95;
+
+}
+
+/* ==========================================================
+   Decorative Stars
+========================================================== */
+
+.storyStars{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+.storyStars span{
+
+    position:absolute;
+
+    font-size:1.6rem;
+
+    animation:
+        twinkleStar 3s ease-in-out infinite;
+
+}
+
+.storyStars span:nth-child(1){
+
+    left:12%;
+    top:18%;
+
+}
+
+.storyStars span:nth-child(2){
+
+    right:18%;
+    top:22%;
+
+    animation-delay:1s;
+
+}
+
+.storyStars span:nth-child(3){
+
+    left:22%;
+    bottom:18%;
+
+    animation-delay:2s;
+
+}
+
+.storyStars span:nth-child(4){
+
+    right:16%;
+    bottom:22%;
+
+    animation-delay:1.4s;
+
+}
+
+.storyStars span:nth-child(5){
+
+    left:50%;
+    top:12%;
+
+    animation-delay:.5s;
+
+}
+
+@keyframes twinkleStar{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        opacity:.6;
+
+    }
+
+    50%{
+
+        transform:scale(1.4);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================================================
+   Story Animation
+========================================================== */
+
+#story{
+
+    animation:
+
+        storyFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes storyFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+/* ==========================================================
+   SCENE 5 : FINAL LETTER
+========================================================== */
+
+#scene5{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #040b17,
+            #071a34,
+            #102957
+        );
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+   Fireflies
+========================================================== */
+
+#fireflies{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.firefly{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#fff59d;
+
+    box-shadow:
+        0 0 10px #ffee58,
+        0 0 25px #fff176,
+        0 0 40px #fff59d;
+
+}
+
+/* ==========================================================
+   Lanterns
+========================================================== */
+
+#lanterns{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.lantern{
+
+    position:absolute;
+
+    width:42px;
+
+    height:62px;
+
+    border-radius:8px;
+
+    background:
+        linear-gradient(
+            #ffd180,
+            #ffb74d
+        );
+
+    box-shadow:
+        0 0 30px
+        rgba(255,180,77,.8);
+
+}
+
+.lantern::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:2px;
+
+    height:60px;
+
+    background:#999;
+
+    left:50%;
+
+    top:-60px;
+
+}
+
+/* ==========================================================
+   Hearts
+========================================================== */
+
+#hearts{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.heart{
+
+    position:absolute;
+
+    font-size:24px;
+
+    filter:drop-shadow(
+        0 0 10px rgba(255,100,150,.8)
+    );
+
+}
+
+/* ==========================================================
+   Constellation
+========================================================== */
+
+#constellation{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   Final Letter
+========================================================== */
+
+#finalLetter{
+
+    position:relative;
+
+    width:78%;
+
+    max-width:900px;
+
+    padding:60px;
+
+    border-radius:28px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.35);
+
+    text-align:center;
+
+    z-index:20;
+
+}
+
+#finalLetter h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:4rem;
+
+    margin-bottom:30px;
+
+}
+
+#finalLetter h2{
+
+    margin-top:40px;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:3rem;
+
+    color:#ffb6d5;
+
+}
+
+#finalLetter p{
+
+    margin:18px 0;
+
+    line-height:2;
+
+    font-size:1.15rem;
+
+    color:#f5f5f5;
+
+}
+
+/* ==========================================================
+   SCENE 6
+========================================================== */
+
+#scene6{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        radial-gradient(
+            circle,
+            #020814,
+            #000000
+        );
+
+}
+
+.goodbye{
+
+    text-align:center;
+
+}
+
+.goodbye h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:5rem;
+
+    margin-bottom:25px;
+
+}
+
+.goodbye p{
+
+    font-size:1.4rem;
+
+    color:#eeeeee;
+
+}
+
+/* ==========================================================
+   Secret Message
+========================================================== */
+
+.secretMessage{
+
+    position:fixed;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:420px;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    text-align:center;
+
+    display:none;
+
+    z-index:99999;
+
+}
+
+.secretMessage h2{
+
+    margin-bottom:15px;
+
+}
+
+.secretMessage p{
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media(max-width:900px){
+
+    #story,
+    #finalLetter{
+
+        width:92%;
+
+        padding:35px;
+
+    }
+
+    #story h1,
+    #finalLetter h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .introText h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .introText h2{
+
+        font-size:2.2rem;
+
+    }
+
+    #speechBubble{
+
+        width:230px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    #moon{
+
+        width:110px;
+
+        height:110px;
+
+        right:25px;
+
+    }
+
+    #moonGlow{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .goodbye h1{
+
+        font-size:3rem;
+
+    }
+
+    #musicButton{
+
+        right:15px;
+
+        bottom:15px;
+
+        padding:14px 20px;
+
+    }
+
+}
+
